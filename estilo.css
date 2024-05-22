@@ -8,6 +8,7 @@
 html{
     /*permite deslizar al hacer clic en los links del menu */
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 /* MENU */
 .contenedor-header{
