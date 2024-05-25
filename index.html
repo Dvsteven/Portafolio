@@ -54,7 +54,6 @@
             <div class="redes">
                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/Dvsteven"><i class="fa-brands fa-github"></i></a>
-
             </div>
         </div>
     </section>
@@ -350,11 +349,26 @@
                 <!-- Formulario -->
                 <div class="col">
                     <form id="contact-form">
-                        <input type="text" name="user_name" placeholder="Tú Nombre" required>
-                        <input type="text" name="user_phone" placeholder="Número telefónico" required>
-                        <input type="email" name="user_email" placeholder="Dirección de correo" required>
-                        <input type="text" name="subject" placeholder="Tema" required>
-                        <textarea name="message" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                        <div class="entryarea">
+                            <input type="text" name="user_name" required>
+                            <div class="labelline">Tu Nombre</div>
+                        </div>
+                        <div class="entryarea">
+                            <input type="text" name="user_phone" required>
+                            <div class="labelline">Número telefónico</div>
+                        </div>
+                        <div class="entryarea">
+                            <input type="email" name="user_email" required>
+                            <div class="labelline">Dirección de correo</div>
+                        </div>
+                        <div class="entryarea">
+                            <input type="text" name="subject" required>
+                            <div class="labelline">Tema</div>
+                        </div>
+                        <div class="entryarea">
+                            <textarea name="message" cols="30" rows="10" required></textarea>
+                            <div class="labelline">Mensaje</div>
+                        </div>
                         <button type="submit">
                             Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
                             <span class="overlay"></span>
@@ -363,8 +377,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section>    
     <!-- footer -->
     <footer>
         <a href="#inicio" class="arriba">
