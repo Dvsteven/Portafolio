@@ -69,3 +69,12 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             });
         });
 });
+
+//Efecto typing inicio
+ var typed = new Typed(".text",{
+    strings:["Tecnólogo de desarrollo de software", "Tecnico en sistemas", "Desarrollador Frontend", "Desarrollador Backend", "Analista de software", ],
+    typeSpeed:50,
+    backSpeed:80,
+    backDelay:100,
+    loop:true
+ })
