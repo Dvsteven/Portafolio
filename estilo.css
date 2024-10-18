@@ -13,7 +13,7 @@
     display: none;
 }
 /*MAGIC CURSOR*/
-body::before {
+html::before {
     content: "";
     position: fixed;
     top: 50%;
