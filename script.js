@@ -78,3 +78,69 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     backDelay:100,
     loop:true
  })
+
+//Magic Cursor
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener('resize', ()=> {
+    canvas.widht = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+const particlesArray = [];
+
+class Particle {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 8 + 2;
+        this.speedX = Math.random() * 0.5 - 1.0;
+        this.speedY = Math.random() * 2 - 1;
+        this.color = `hsla(${Math.random() * 30 + 110}, 100%, 50%, 0.8)`;
+        this.opacity = 1;
+        this.fadeRate = Math.random() * 0.01 + 0.009;
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.size *= 0.94;
+        this.opacity -= this.fadeRate;
+    }
+
+
+    draw() {
+        ctx.fillStyle = `rgba(255, 0, 0, ${this.opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+    
+
+}
+
+canvas.addEventListener('mousemove', (event) =>{
+    for (let i = 0; i < 44; i++) {
+        particlesArray.push(new Particle(event.x, event.y));
+    }
+});
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particlesArray.forEach((particle, index) =>{
+        particle.update();
+        particle.draw();
+
+        if ( particle.size < 0.2 || particle.opacity <= 0) {
+            particlesArray.splice(index, 1);
+        }
+    });
+    requestAnimationFrame(animate);
+}
+
+animate();
