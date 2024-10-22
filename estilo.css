@@ -12,27 +12,6 @@
 ::-webkit-scrollbar {
     display: none;
 }
-/*MAGIC CURSOR*/
-html::before {
-    content: "";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0.2;
-    transform: translate(-50%, -50%) scale(0.5);
-    z-index: -1;
-}
-
-canvas {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-/*------------------------------------------------------------------------------*/
 html{
     /*permite deslizar al hacer clic en los links del menu */
     scroll-behavior: smooth;
@@ -44,7 +23,7 @@ html{
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 10000;
 }
 .contenedor-header header{
     max-width: 1100px;
@@ -207,6 +186,7 @@ html{
     align-items: center;
     justify-content: center;
     transition: .3s;
+    z-index: 10000;
 }.sobremi .fila .col .contenedor-intereses .interes:hover{
     background-color: #FF9898;
 }
@@ -225,7 +205,7 @@ html{
     font-size: 16px;
     color: #fff;
     position: relative;
-    z-index: 10;
+    z-index: 100000;
 }
 .sobremi button .overlay{
     position: absolute;
@@ -523,6 +503,7 @@ html{
     height: fit-content;
     margin: 10px;
     cursor: pointer;
+    z-index: 10000;
 }
 .portfolio .galeria .proyecto img{
     width: 100%;
