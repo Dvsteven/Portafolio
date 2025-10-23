@@ -217,6 +217,61 @@ html{
     z-index: -1;
     transition: 1s;
 }
+.sobremi .fila .col .contenedor-tecnologias{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.sobremi .fila .col .contenedor-tecnologias .categoria{
+    background-color: transparent;
+}
+.sobremi .fila .col .contenedor-tecnologias .categoria h4{
+    margin: 6px 0 8px 0;
+    color: #FF9898;
+    font-family: 'Righteous';
+}
+.sobremi .fila .col .contenedor-tecnologias .lista-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.sobremi .fila .col .contenedor-tecnologias .tech{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .25s;
+    color: #fff;
+}
+.sobremi .fila .col .contenedor-tecnologias .tech:hover{
+    background-color: #FF9898;
+    color: #1e2326;
+}
+.sobremi .fila .col .contenedor-tecnologias .tech i{
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+.sobremi .fila .col .contenedor-tecnologias .tech span{
+    font-size: 12px;
+    font-weight: 600;
+}
+/* Ensure devicon icons scale nicely */
+.devicon{
+    display: inline-block;
+    font-size: 34px;
+    line-height: 1;
+}
+
+@media (max-width: 800px){
+    .sobremi .fila{flex-direction: column;}
+    .sobremi .fila .col{width:100%;}
+    .sobremi .fila .col .lista-icons{justify-content: flex-start;}
+}
 .sobremi button:hover .overlay{
     width: 100%;
 }
